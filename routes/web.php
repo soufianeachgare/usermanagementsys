@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,6 +15,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware(['auth','verified'])->group(function () {
     Route::resources('roles', RoleController::class);
+    Route::resources('users', UserController::class);
 });
 
 Route::middleware('auth')->group(function () {
