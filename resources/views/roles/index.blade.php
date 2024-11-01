@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app-layout>
     <div class="container">
         <div class="flex md:flex-row md:justify-between md:items-center p-4 mb-2">
             <h2 class="text-2xl font-semibold text-gray-800 mb-4">Role Management</h2>
@@ -58,4 +56,4 @@
 
         {!! $roles->links('pagination::bootstrap-5') !!}
     </div>
-@endsection
+</x-app-layout>
