@@ -75,7 +75,6 @@ class RoleController extends Controller
 
         $role = Role::create([
             'name' => $request->input('name'),
-            'agency_id' => $this->user()->id ?? null
         ]);
         $role->syncPermissions($permissionsID);
 
